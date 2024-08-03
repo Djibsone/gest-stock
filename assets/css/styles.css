@@ -1,0 +1,46 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    /* display: flex;
+    flex-direction: column;
+    min-height: 100vh; */
+}
+body {
+    background: #cccc; /* à commenter si le bg du card doit etre transparent*/
+}
+label span {
+    color: red;
+    font-size: large;
+}
+/* .card-header {
+    border: 1px solid black;
+} */
+label, button {
+    font-weight: bold;
+}
+span {
+    color: #fff;
+    cursor: pointer;
+}
+.btn-edit-delete{
+    padding: 2px;
+    margin: 0px;
+}
+.custome-icon {
+    color: black;
+    float: left;
+    font-size: 25px;
+    width: 1em;
+    transform: scaleX(1.5);
+
+}
+.separation {
+    width: 100%;
+    border: 1px solid rgba(116, 114, 114, 0.287);
+    margin-bottom: 10px;
+}
+
+
+/* @media screen and (max-width: 600px) {
+} */
