@@ -106,7 +106,7 @@ $(document).ready(function() {
                     <tr>
                         <th>${'P00' + item.id}</th>
                         <td>${item.designation}</td>
-                        <td>${item.stock_actuel}</td>
+                        <td>${item.stock_actuel} ${item.stock_actuel <= 10 ? '<span class="bg-danger p-1 rounded-pill">Ravitaillement</span>' : ''}</td>
                         <td>
                             <a href="#" class="btn btn-info btn-edit-delete description"
                                 data-id="${item.id}"> 

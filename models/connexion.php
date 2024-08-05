@@ -146,6 +146,42 @@ function delete($id){
         return false;
 }
 
+//Valider l'entrée
+function validateInput($input) {
+    $pattern = "/^[\p{L}\p{M} \'\-]+$/u";
+
+    if (preg_match($pattern, $input)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//Verifier si une entrée est numeric
+// function containsNumeric($values) {
+//     foreach ($values as $value) {
+//         // $characters = str_split($value);
+//         $characters = $value;
+        
+//         foreach ($characters as $char) {
+//             if (is_numeric($char)) {
+//                 return true;
+//             }
+//         }
+//     }
+//     return false;
+// }
+function allValuesNumeric($values) {
+    foreach ($values as $value) {
+        if (!is_numeric($value)) {
+            return false; // Return false if any value is not numeric
+        }
+    }
+    return true; // Return true if all values are numeric
+}
+
+
+
 /* CREATION D'UNE PROCEDURE
 
     DELIMITER //

@@ -53,7 +53,7 @@
 
                                     <th scope="row">P00<?= $produit['id'] ?></th>
                                     <td><?= $produit['designation'] ?></td>
-                                    <td><?= $produit['stock_actuel'] ?></td>
+                                    <td><?= $produit['stock_actuel'] ?> <?= $produit['stock_actuel'] <= 10 ? '<span class="bg-danger p-1 rounded-pill">Ravitaillement</span>' : '' ?></td>
                                     <td>
                                         <a href="#" class="btn btn-info btn-edit-delete description"
                                             data-id="<?= $produit['id'] ?>"> 
@@ -104,7 +104,7 @@
                         </form>
                     </div>
 
-                    <div class="row">
+                    <div class="row mb-3">
                         <div class="col">
                             <div class="card">
                                 <div class="card col">
@@ -173,6 +173,25 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="card col mb-3">
+                        <h1 class="text-center"> Ajout d'une catégorie </h1>
+                        <div class="separation"></div>
+                        <!-- <hr> -->
+                        <form action="controllers/store.php" method="post">
+
+                            <div class="form-row mb-3">
+                                <div class="col">
+                                    <label>Catégorie <span>*</span></label>
+                                    <input type="text" class="form-control" name="category" placeholder="Désignation">
+                                </div>
+                            </div>
+                                    
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-success btn-flat rounded-pill" name="add"><span class="fa fa-save"> Enregistrer</span></button>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <!-- Fin formulaire -->
